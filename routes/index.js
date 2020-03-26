@@ -12,6 +12,7 @@ router.get("/", function(req,res,next){
 /* GET home page. */
 router.post('/', function(req, res, next) {
   User.create(req.body,(err,user)=>{
+    console.log(req.body,user,"req,user")
     if(err){console.log("err while creating user"+ err)}
     var token = auth.generateJWT(user);
     var userinfo = {
