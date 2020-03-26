@@ -6,7 +6,7 @@ var auth = require("../authentication/auth");
 
 
 router.get("/", function(req,res,next){
-  res.render("index");
+  res.render("index",{title:"welcome to dog backend"});
 })
 
 /* GET home page. */
