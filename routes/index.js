@@ -3,6 +3,12 @@ var router = express.Router();
 var User = require("../model/user");
 var auth = require("../authentication/auth");
 
+
+
+router.get("/", function(req,res,next){
+  res.render("index");
+})
+
 /* GET home page. */
 router.post('/', function(req, res, next) {
   User.create(req.body,(err,user)=>{
